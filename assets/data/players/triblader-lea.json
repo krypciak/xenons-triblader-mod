@@ -1,8 +1,8 @@
 {
   "DOCTYPE": "PLAYER",
-  "character": "main.schneider",
-  "sheet": "npc.schneider",
-  "headIdx": 5,
+  "character": "main.lea",
+  "sheet": "npc.triblader-lea",
+  "headIdx": 0,
   "class": "TRIBLADER",
   "stats": {
     "hp": {
@@ -35,9 +35,9 @@
     "meleeDistance": 32,
     "minDistance": 48,
     "foodSprites": [
-      "SANDWICH",
-      "SANDWICH",
-      "SANDWICH"
+      "STEAK",
+      "STEAK",
+      "STEAK"
     ]
   },
   "walkAnims": {
@@ -591,6 +591,9 @@
       "maxBounce": 3,
       "timer": 1.5,
       "trail": true,
+      "effectKeys": {
+        "trail": "ballTrailLea"
+      },
       "multiHit": false,
       "noLightGlow": false,
       "type": "BALL",
@@ -1674,7 +1677,7 @@
           "z": 0
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
+          "src": "media/entity/effects/triblader-lea.png",
           "xCount": 1,
           "offX": 0,
           "offY": 0,
@@ -1856,7 +1859,7 @@
           "z": 0
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
+          "src": "media/entity/effects/triblader-lea.png",
           "xCount": 1,
           "offX": 0,
           "offY": 0,
@@ -6743,6 +6746,9 @@
       "maxBounce": 3,
       "timer": 1.5,
       "trail": true,
+      "effectKeys": {
+        "trail": "ballTrailLea"
+      },
       "multiHit": false,
       "noLightGlow": false,
       "type": "BALL",
@@ -16014,9 +16020,9 @@
           "y": 25
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 112,
-          "offY": 118,
+          "src": "media/entity/effects/triblader-lea.png",
+          "offX": 32,
+          "offY": 25,
           "width": 30,
           "height": 48
         },
@@ -16148,7 +16154,7 @@
           },
           "effect": {
             "sheet": "combat.tribladerXTM",
-            "name": "solarChain"
+            "name": "solarChainLea"
           },
           "offset": {
             "x": 0,
@@ -16287,9 +16293,9 @@
           "y": 25
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 112,
-          "offY": 118,
+          "src": "media/entity/effects/triblader-lea.png",
+          "offX": 32,
+          "offY": 25,
           "width": 30,
           "height": 48
         },
@@ -16421,7 +16427,7 @@
           },
           "effect": {
             "sheet": "combat.tribladerXTM",
-            "name": "solarChain"
+            "name": "solarChainLea"
           },
           "offset": {
             "x": 0,
@@ -16552,29 +16558,6 @@
       }
     },
     "solarEruptionHilt": {
-      "faceAnims": {
-        "name": "default",
-        "shapeType": "Y_FLAT",
-        "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 112,
-          "offY": 204,
-          "width": 30,
-          "height": 40
-        },
-        "dirs": "1",
-        "flipX": [
-          0
-        ],
-        "tileOffsets": [
-          0
-        ],
-        "time": 1,
-        "faceRotate": true,
-        "frames": [
-          0
-        ]
-      },
       "copyOwnerAnims": false,
       "breakType": "ACTION",
       "action": [
@@ -16647,15 +16630,18 @@
           "z": -4
         },
         "sheet": {
-          "src": "media/entity/effects/triblader-mm.png",
-          "offX": 142,
-          "offY": 118,
+          "src": "media/entity/effects/triblader-lea.png",
+          "offX": 32,
+          "offY": 25,
           "width": 30,
           "height": 48
         },
         "dirs": "1",
         "flipX": [
           0
+        ],
+        "flipY": [
+          1
         ],
         "tileOffsets": [
           0
@@ -34167,7 +34153,7 @@
       },
       "ATTACK_SPECIAL2_A": {
         "name": {
-          "en_US": "Solar Eruption"
+          "en_US": "Sunfury"
         },
         "description": {
           "en_US": "Attack with a powerful flail that does heavy damage to all enemies it hits. The tip does more damage than the chain."
@@ -44056,7 +44042,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sit"
+            "anim": "levelUpStatic"
           },
           {
             "duration": 0,
@@ -44713,7 +44699,8 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "battleIdle"
+            "anim": "levelUpPre",
+            "followUp": "levelUpStatic"
           },
           {
             "duration": 0,
@@ -44736,7 +44723,7 @@
             }
           },
           {
-            "time": 0.5,
+            "time": 0.50,
             "type": "WAIT"
           },
           {
@@ -44796,7 +44783,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "sit"
+            "anim": "levelUpStatic"
           },
           {
             "duration": 0,
@@ -45575,7 +45562,7 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "battleJump"
+            "anim": "floatSword"
           },
           {
             "value": 0,
@@ -45746,7 +45733,8 @@
             "wait": false,
             "viaWalkConfig": false,
             "type": "SHOW_ANIMATION",
-            "anim": "spinRepeat"
+            "anim": "levelUpPre",
+            "followUp": "levelUpStatic"
           },
           {
             "time": 0.2,
@@ -45754,12 +45742,6 @@
           },
           {
             "type": "WAIT_UNTIL_ON_GROUND"
-          },
-          {
-            "wait": false,
-            "viaWalkConfig": false,
-            "type": "SHOW_ANIMATION",
-            "anim": "sit"
           },
           {
             "type": "SET_ATTRIB_BOOL",
