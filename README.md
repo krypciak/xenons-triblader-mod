@@ -1,17 +1,15 @@
 # Xenon's Triblader Mod
 ![Kindling Triad](https://user-images.githubusercontent.com/105614278/168501697-8dccf971-8564-4166-bbdb-d3c6ec79d870.gif)
 
-Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. Manlea and Ninja skins should remain disabled in-game for this mod to work. Mod only contains text for English.
-
-# **PRE-RELEASE VERSION**
-
-This is currently a pre-release version. Please provide the author, XenonA7, with feedback on combat art balance. Also please report any crashes, glitches, or other issues as a result from playing the entire game under a different character configuration. I won't be able to test every quest, cutscene, etc myself so feedback is critical. Please give feedback at the Discord linked below.
+Install instructions can be found at the bottom of this page. The DLC is required for this mod to funciton. This mod is also aimed at those who have already experienced Crosscode and its DLC to completion. **Manlea and Ninja skins should remain disabled in-game for this mod to work**. Mod only contains text for English.
 
 ### **Required Mods**
 1. **extendable-severed-heads:** https://github.com/CCDirectLink/extendable-severed-heads  
    * Required for mods that add extra characters
 2. **cc-alybox:** https://github.com/lexisother/cc-alybox
    * Library mod needed for some features
+3. **menu-ui-replacer:** https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
+   * Library mod needed for modded menu portraits
 
 ### **Recommended Mods (optional - for enhanced party members)**
 1. **cc-combat-art-level-extender:** https://github.com/CCDirectLink/cc-combat-art-level-extender  
@@ -23,12 +21,14 @@ This is currently a pre-release version. Please provide the author, XenonA7, wit
 https://discord.gg/CsfUk9vpFq
 
 ### **Special Thanks:**
-- **Lychee:** Spritework for Triblader Lea
+- **HeartLychee:** Spritework for Triblader Lea, Triblader2 push/pull animations
 - **Krypek:** Code for better handling of multi-opponent duels, implemented option to skip modded intro map
 - **Nax:** JS support
 - **Alyxia:** JS support, author of AlyBox
 - **eɪsus|𐤀기술자🇰🇷 (2hh8899):** Author of original Spike Ball combat art, author of the Arcane Lab mod which I used as a framework for duel enemies
 - **Bakafish**: Author of Autumn's Genesis, provided code to support proxy HP conditions
+- **Lubkuluk**: JS support, patch for Hexacast key panel functionality
+- **Orco Pixelado**: Triblader menu portrait artwork
 
 ## **Main Features:**
 1. Fully playable triblader class, with a full set of 92 new combat arts to discover
@@ -39,6 +39,7 @@ https://discord.gg/CsfUk9vpFq
 
 ## **How to Play:**
 - With the mod installed, the entrance to the Rhombus Dungeon at the start of the game will take you to a place to select a character, after which you will continue to the Rhombus Dungeon and the rest of the game.
+  * Note that this can be disabled in the options menu.
 - The following can be accessed using any existing Lea save file, a new game is not required. It will work regardless of what character you are playing as.
   * Unlock the **Triblader League** arena cup by talking to the Tribladers standing around the **Open PVP Fields** in Rhombus Square. Unlockable after beating the final dungeon in the DLC (Ku'lero Temple).
   * Quick-swap menu added to the **Rhombus Arena Lobby** and **Rookie Harbor Info Hub** to change your character at will. Look for a flashing sign at the top-right of the lobby. Swapping characters will keep all your progress/stats/inventory, and is seamless. Check your circuit tree to see which Triblader arts you have equipped after swapping.
@@ -55,6 +56,7 @@ https://discord.gg/CsfUk9vpFq
 ![triblader3](https://user-images.githubusercontent.com/105614278/168503467-896c5082-e2bc-4640-9a85-651c878634d2.gif)
 ![triblader4](https://user-images.githubusercontent.com/105614278/168503633-d4a825cb-7f82-4b6b-a6fc-4e471e74ad31.gif)
 ![triblader5](https://user-images.githubusercontent.com/105614278/168504082-661b6b87-e9b3-42ef-8192-603a01f0f1ca.gif)
+![triblader-lea](https://github.com/XenonA7/xenons-triblader-mod/assets/105614278/da027b4e-a16b-4eb3-8639-3c12ceaa92e7)
 
 ## **Combat Arts:** 
 
@@ -186,11 +188,12 @@ Versions older than v2.21.0 will give an error with this mod.
 
 ## Install Mods
 1. Download and extract XTM and its dependencies, along with recommended mods if desired  
-(XTM Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
-(Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
-(Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
-(Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
-(Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
+- (XTM Releases) https://github.com/XenonA7/xenons-triblader-mod/releases  
+- (Required) extendable-severed-heads: https://github.com/CCDirectLink/extendable-severed-heads/releases  
+- (Required) cc-alybox: https://github.com/lexisother/cc-alybox/releases
+- (Required) menu-ui-replacer: https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
+- (Recommended) cc-combat-art-level-extender: https://github.com/CCDirectLink/cc-combat-art-level-extender/releases  
+- (Recommended) cc-party-element-effects: https://github.com/XenonA7/cc-party-element-effects/releases  
 
 2. Place extracted mod folders inside **\CrossCode\assets\mods**  
 ![image](https://user-images.githubusercontent.com/105614278/179912844-b0ac6c4e-4a03-4a97-a3fc-22eb7d1a4bce.png)  
@@ -211,3 +214,5 @@ If your mods appear in-game, you are good to go. Note that XTM is compatible wit
 2. Install the new version where the old one used to be  
 
 * You can't just override the old version because if a new version removes old files or renames certain files then overriding will mess it up.
+
+* All new versions of XTM are save-compatible with previous versions unless otherwise stated in the changelog.

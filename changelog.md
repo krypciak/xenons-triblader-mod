@@ -1,3 +1,248 @@
+## 1.2.5 (08/04/2024)
+### Changes
+- Removed remaining content from dev room, migrated to Hexacast mod
+- Removed the following maps (now part of Hexacast mod):
+  * \maps\xtm\bonus\guild-war.json
+  * \maps\xtm\bonus\statue-cutscene.json
+
+## 1.2.4 (07/31/2024)
+### Changes
+- Removed dev room teleporter from Lea's attic; the new dev room is currently in the Hexacast mod
+- Deleted "training-island" teleporter from dev room
+- Deleted "training-2v2" teleporter from dev room
+- Removed the following maps (now part of Hexacast mod):
+  * \maps\xtm\bonus\training-island.json
+  * \maps\xtm\bonus\training-1v1.json
+  * \maps\xtm\bonus\training-2v2.json
+
+## 1.2.3 (07/14/2024)
+### Changes
+- Updated XTM dev room combat music settings
+- Added effect spikeAuraNPC
+- Removed the following maps (now part of Hexacast mod):
+  * \maps\xtm\bonus\art-testing.json
+  * \maps\xtm\bonus\art-testing.-ALjson
+  * \maps\xtm\bonus\art-testing-unused.json
+  * \maps\xtm\bonus\green-screen-room.json
+- Deleted "art-testing" and "green-screen-room" teleporters from dev room
+
+## 1.2.2 (06/26/2024)
+### Changes
+- Moved WIP maps to Hexacast mod
+- Added particle pLight source to Triblader charged ball trails
+- Updated charged ball light settings to Hexacast standard
+- Added light sources to standard melee attack effects
+
+## 1.2.1 (06/18/2024)
+### Fixes
+- Added Menu UI Replacer to install instructions
+
+## 1.2.0 (06/18/2024)
+### General
+- New dependency mod: Menu UI Replacer
+  * https://github.com/CCDirectLink/cc-menu-ui-replacement/releases
+### New Content
+- New menu sprites when playing as Triblader2/3/4/5
+  * Original artwork by Orco Pixelado
+  * Thanks to Bakafish for library mod support
+- Added unfinished map file
+### Changes
+- Orco Pixelado added to mod credits
+- Hue adjustments to Triblader4 portraits
+- Updated Triblader4 sprite hue to be more consistent with portraits
+
+## 1.1.1 (06/06/2024)
+### Changes
+- Blazing Mirage and So'najiz Phalanx clones no longer draw enemy aggro
+### Fixes
+- Fixed Spectral Legion clones able to consume SP
+
+## 1.1.0 (05/29/2024)
+### New Content
+- Added green screen map to XTM dev room
+### Changes
+- Triblader5 DASH_SLOW action is now also steerable
+- Added light source to effect waveTriangleTrail (used in Soul Shatter)
+
+## 1.0.3 (05/13/2024)
+### New Content
+- Added additional font icons needed for Hexacast mod custom skills
+
+## 1.0.2 (05/05/2024)
+### New Content
+- Added font icons needed for custom skills in Hexacast mod
+- Added Lubkuluk to XTM credits for Hexacast KeyPanel code contribution
+- Added teleporter to AL dev room from XTM dev room (only works if AL is installed)
+- Added map art-testing-AL.json, not implemented by default
+### Changes
+- Moved the hologram sign slightly in the art-testing map
+- Removed the sword icon from the mod's name entry
+- Deleted unnecessary proxy groupings "solarEruptionParts" and "solarEruptionGroup"
+- Vermillion Firestorm effect laserSrc changed to laserSrcMega
+### Fixes
+- Fixed pvp opponents not charging before using Solar Eruption
+- Removed all broken animation references to "attackMirrEnd"
+- Fixed Spectral Legion clones shooting wrong proxy types occasionally
+
+## 1.0.1 (03/16/2024)
+### Changes
+- Magnet Storm now resets camera during final strike
+- Magnet Storm added sound effect when final strike hits
+- Re-worded the description for Magnet Storm
+### Fixes
+- Blizzard Slash fixed missing HEAVY hit stability
+### Balance
+- Changes to both player and enemy:
+  * Icicle Slash reverted to old punch-style hitbox
+  * Icicle Slash hit stability decreased from MASSIVE to HEAVY
+  * Blizzard Slash first swing reverted to old punch-style hitbox
+  * Blizzard Slash second swing increased hitbox radius from 72 to 88
+
+## 1.0.0 (03/16/2024)
+### New Content
+- New character: Triblader Lea (sprites by **HeartLychee**)
+  * No special modifiers. Custom Daybreak, Wave charge shot, Sunfury particle sprites by **HeartLychee**)
+- New Triblader2/3/4/5 block pushing animations by **HeartLychee**)
+- Magnet Storm completely reworked
+- Added proper PVP enemy death handling in training maps and arena maps for duels with multiple opponents
+- Added NPCs to dev room to demonstrate whether or not you have other mods installed (logic steps)
+- Added new art-testing map to dev room
+- Added effect critical to new PVP death logic: teleport.showFastScale
+- Added \assets\data\effects\teleport.json.patch
+### Changes
+- Removed the "beta" map; You now proceed straight to the Rhombus Dungeon after choosing a character
+- PVP enemy healthbars are more compact now, they now overlap to save space (only applies when dueling multiple opponents)
+- Reformatted headIdx.json.patch for extendable-severed-heads 1.1.0
+- Removed unused "pvp-lukas-old" and "pvp-schneiders" arena maps
+- Added Triblader Lea character option to all XTM character change signs: XTM Dev Room, Rookie Harbor Info Hub, Rhombus Arena Lobby.
+- Removed all instances of "plot.xtm.character", which is obsolete with AlyBox
+- Removed "characterInitOnce" EventTrigger from arena lobby patch, which is obsolete with AlyBox
+- Removed "plot.xtm.swapBack" functionality from arena maps
+- Renamed custom-party-members.js to custom-party-options.js
+- Updated HeartLychee credits preferences
+- Changed BGM setting in "Blade Rink" arena match
+- Updated all "XTM Credits" signs
+- Removed unused "Triblader Prime" arena round
+- Standardized BGM options in training-1v1, training-2v2, and training island maps
+- Renamed enemy entities in training island map to XTM standard
+- Reformatted the character change sign in the Rookie Harbor info hub to align with all other XTM signs
+- Reduced particle count on Icicle Tomb to improve performance
+- Dev room changes
+  * Dev room teleporters now have spawn conditions, used for the mod crossover tests
+  * Removed the hedgehags from the dev room
+- Added combat dialogue support to apollo-4 and shizuka nozoom enemy variants (used for "Ultimate PVP" map)
+- Player walks to starting position when starting the duel on Training Island, instead of running
+- Re-worded description for Ice Flak
+- Re-worded description for Tower of Tranquility
+- Minor graphical tweak to Tower of Tranquility proxy sprites
+- Beekeeper: bees now constantly look for the nearest target rather than always chase their original target
+- Scorching Rays red screen flash is now less intense
+- Added shaking effect right before thawing for Ice Brace, Stasis Stance, and Tower of Tranquility
+- All BLUE_SPARKLE particles now have angleVary for all effects that use them
+- Player now travels farther during Polar Geyser final slash
+- Renamed effect megaTankAuraAltNoCircle to blizzardSlashSnowflakes
+- Snowstorm post-attack wait increased from 0.4 seconds to 0.6 seconds
+- Avalanche Assault and Frozen Rays initial screen flash is now less intense
+- Proxy fireDaggerStuck changed from breakType NEVER to COMBATANT
+- Greatly reduced zoom blur effect for Fire Saw
+- Moved effects related to proxy ms_main into file ball-shock-xtm.json
+- Effect shockLaserSource now moves with target
+- Improved effects for the following arts:
+  * Scorching Rays
+  * Tower of Tranquility (landing effect)
+  * Polar Geyser
+  * Blizzard Slash
+  * Snowstorm
+  * Avalanche Assault
+  * Calamity's Advent
+  * Frigid Hurricane
+  * Vermillion Firestorm
+  * Magnet Storm
+  * Sleet Singularity
+### Fixes
+- Fixed "Wet Work" quests for all Triblader characters by adding the "STANDARD" hint property
+- Fixed a crash related to gynthar-heat.png (by including gynthar-heat-copy.png in the mod files)
+- Fixed PVP enemies headIdx conflict with other mods (thanks to extendable-severed-heads 1.1.0)
+- Added a NPBLOCK wall to fix an out-of-bounds JDAC exploit in xtm/char-select/outdoors
+- Fixed wrong internal map name for xtm/char-select/outdoors
+- Fixed all PVP maps "Match Point" AR_MSG text
+- Retrofitted all pvp maps with new logic to handle deaths; no more defeated enemies sitting around
+- Fixed ice sliding during cutscene after duel in "Blade Rink" arena map
+- Fixed incorrect loop timing in BGM triangle-prep.ogg
+- Fixed a code typo in Wild Gambit
+- Fixed Wave Mortar "status" description property
+- Fixed proxy waveMortar breakType (changed from NEVER to COMBATANT)
+- Fixed proxy vitalityCurseDrain breakType (changed from NEVER to COMBATANT)
+- Effect "stasisEffects" is now centered properly for Stasis Stance and Tower of Tranquility
+- Fixed incorrect melee hitbox on Icicle Slash
+- Fixed incorrect melee hitbox on first slash of Blizzard Slash
+- Fixed looping sound in effect hurricane1 lingering too long
+- Fixed proxy lightningRodBolt stun lock release
+- Alternating Charge now ignores ice physics
+- Fixed an issue where the beam sound effect from Triforce Slash could get interrupted
+- Level adjustment switches in training-1v1 and training-2v2 maps now properly hide during duel
+- Fixed a softlock in the outdoor area from the mod intro maps caused by reloading during the puzzle
+- Fixed player able to be pushed around during Triforce Slash
+- Fixed Celestial Constellation status description
+- Fixed Celestial Constellation proxies not being DETACH_TIME_PARENT
+### Balance
+- Changes to PVP enemies only:
+  * Enemy First Fractal damage slightly nerfed
+  * Enemy Prismatic Meltdown laser chase speed greatly nerfed
+  * Enemy Prismatic Meltdown laser lasts 0.5s longer
+  * Enemy Frigid Hurricane internal pull force buffed from EASY_ESCAPE to RUN_ESCAPE
+  * Enemy Frigid Hurricane added concentric pull force at WALK_ESCAPE strength
+  * Enemy Vermillion Firestorm now has a suction effect to make it more difficult to escape
+  * Enemy Celestial Constellation new projectiles have higher knockback than player version
+  * Enemy Celestial Constellation new projectiles hit a single target, player versions are multiHit
+- Changes to player only:
+  * Reworked Wave Mortar, it now auto-adjusts the proxy range for enemies in view
+  * Wave mortar damage reduced
+  * Wave mortar knockback reduced greatly
+  * Magnet Storm completely reworked and redesigned
+  * Scorching Rays proxy subPierce damage/status increased
+  * Scorching Rays initial TACKLE damage increased
+  * Scorching Rays looping stun damage increased
+  * Tower of Tranquility now spawns icicles upon landing
+  * Faraday Formation now stun locks enemies on first hit
+  * Faraday Formation executes much faster overall, should be more viable
+  * Blade of E'nel activation time reduced from 1.0 seconds to 0.5 seconds
+  * Blade of E'nel duration increased from 6 seconds to 7 seconds
+  * Shadow Spark proxies orbit duration reduced from 5 seconds to 3 seconds
+  * Shadow Spark proxies attack velocity (after orbiting) increased from 300 to 400
+  * Frost Rupture final explosion damage greatly increased, crit chance disabled
+  * Frost Rupture status infliction increased
+  * Kindling Triad now grants weight -1 during counter attack (player no longer affected by push/pull)
+  * So'najiz Phalanx reduced delay on clones before shooting lasers
+  * Sleet Singularity charge time decreased
+- Changes to both player and enemy:
+  * Flash Freeze now grants the victim at 130% DEF multiplier while active
+  * Icicle Tomb status factor increased greatly
+  * Blizzard Slash icicleSmall startDistCollide changed from CLOSER to DROP (major nerf)
+  * Blizzard Slash now shoots weaker hail variant that does not bounce
+  * Blizzard Slash attack strength decreased from MASSIVE to HEAVY
+  * Blizzard Slash melee hitbox radius for final slash slightly increased
+  * Blizzard Slash melee damage increased
+  * Icicle Slash attack strength decreased from MASSIVE to HEAVY
+  * Icicle Slash melee damage slightly increased
+  * Molten Daggers damage tick rate cut in half, overall damage slightly reduced
+  * Molten Daggers status inflict slightly increased
+  * Molten Daggers (specifically fireDaggerStuck) will despawn past a total of 12 active at a time
+  * Ki Spin damage decreased
+  * Vortex Thrust projectile damage reduced, final slash melee damage increased
+  * Vortex Thrust can no longer crit on the final slash
+  * Lightning Rod damage slightly increased
+  * Thunder Wrath now terminates when running into a solid wall (this removes an exploit against bosses with solid collision)
+  * Heavy Slash now grants HEAVY hit stability, making it harder to interrupt
+  * Vitality Curse capped at 3 active at a time
+  * Celestial Constellation now shoots bonus projectiles as it travels (major buff)
+  * Celestial Constellation cc_main and cc_orbiter damage factor reduced
+
+
+## 0.9.4 (02/07/2024)
+### New Content
+- Added option to skip the modded intro maps in the options menu (feature by **Krypek**)
+
 ## 0.9.3 (02/05/2024)
 ### General
 - Now requires CCLoader2 version 2.22.1 or higher!
